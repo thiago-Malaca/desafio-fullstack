@@ -4,11 +4,11 @@ O desafio consiste em criar o *front* e o *back-end* que gerencie os espetáculo
 
 ## Instruções
 
-O candidato pode escolher as tecnologias **node.js** ou **python** para o *back-end*, já para o *front-end* pode escolher o seu *framework preferido*.
+O candidato pode escolher as tecnologias **node.js** ou **python** para o *back-end*, já para o *front-end* pode escolher o seu **framework preferido**.
 
 O projeto deve ser construido utilizando **sqlite3** como banco de dados.
 
-As aplicações devem rodar dentro de dois conteiners (um para o front e outro para o back). Deverá ser montado um **docker-compose** com o ambiente necessário para executar as aplicações.
+As aplicações devem rodar dentro de **dois conteiners** (um para o *front* e outro para o *back*). Deverá ser montado um **docker-compose** com o ambiente necessário para executar as aplicações.
 
 1. Efetue o **fork** deste repositório e crie um branch com o seu nome. (ex: ronaldo-rodrigues).
 2. Após finalizar o desafio, crie um **Pull Request** com o seu nome. (ex: ronaldo-rodrigues).
