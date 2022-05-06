@@ -17,7 +17,7 @@ frontend-spectacle/npm-debug.log*
 frontend-spectacle/yarn-debug.log*
 frontend-spectacle/yarn-error.log*
 
-
+.DS_Store
 
 # compiled output
 backend-spectacle/dist
