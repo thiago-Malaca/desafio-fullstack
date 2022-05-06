@@ -1,0 +1,35 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+
+model Spectacle {
+  id               Int           @id @default(autoincrement())
+  name             String
+  description      String
+  reservationPrice Float         @default(27.99)
+  reservationLimit Int
+  reservations     Reservation[]
+  createdAt        DateTime      @default(now())
+}
+
+model Reservation {
+  id          Int        @id @default(autoincrement())
+  personName  String
+  personCPF   String
+  spectacle   Spectacle? @relation(fields: [spectacleId], references: [id])
+  spectacleId Int?
+  createdAt   DateTime   @default(now())
+}

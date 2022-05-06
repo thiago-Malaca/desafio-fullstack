@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: frontend-spectacle
+    image: frontend-spectacle:1.0.0
+    build:
+      context: ./frontend-spectacle
+      dockerfile: ./Dockerfile
+    command: npm run start
+    ports:
+      - 3000:3000
+    networks:
+      - spectacle
+  backend:
+    container_name: backend-spectacle
+    image: backend-spectacle:1.0.0
+    build:
+      context: ./backend-spectacle
+      dockerfile: ./Dockerfile
+    command: npm run start
+    ports:
+      - 3001:3001
+    networks:
+      - spectacle
+networks:
+  spectacle:
